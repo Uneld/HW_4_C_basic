@@ -9,7 +9,7 @@ int main() {
     while (num != 0) {
         if ((num % 10) % 2 != 0) {
 			 printf("No\n");
-            return 1;
+            return 0;
         }
         num /= 10;
     }

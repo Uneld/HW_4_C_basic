@@ -8,26 +8,21 @@ int main() {
 	
 	if (num < 10){
 		printf("Wrong input");
-		return 1;
+		return 0;
 	}
 
     printf("Lucky numbers between 10 and '%d': \n", num);
 
     for (int i = 10; i <= num; i++) {
-		int product = 1, numProd = i;
+		int product = 1, sum = 0 , num = i;
 		
-		while (numProd != 0) {
-			product *= numProd % 10;
-			numProd /= 10;
+		while (num != 0) {
+			product *= num % 10;
+			sum += num % 10;
+			num /= 10;
 		}
-		
-		int sum = 0, numSum = i;
 
-		while (numSum != 0) {
-			sum += numSum % 10;
-			numSum /= 10;
-		}
-		
+	
         if (product == sum) {
 			printf("%d ", i);
             countLuckyNums++;

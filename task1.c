@@ -8,7 +8,7 @@ int main() {
     
     if (a > b){
 		printf("Wrong input");
-		return 1;
+		return 0;
 	}
     
     for (int i = a; i <= b; i++) {
